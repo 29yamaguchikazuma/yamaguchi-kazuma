@@ -23,7 +23,7 @@ public class Qes1_13 {
 		//・文字型
 		char charNum;
 		//・文字列型
-		String StringNum;
+		String stringNum;
 		//・ブーリアン型
 		boolean booleanNum;
 		
@@ -44,7 +44,7 @@ public class Qes1_13 {
 		//・文字型
 		charNum = '\u0000';
 		//・文字列型
-		StringNum = null;
+		stringNum = null;
 		//・ブーリアン型
 		booleanNum = false;
 		
@@ -64,7 +64,7 @@ public class Qes1_13 {
 		//・文字型
 		charNum = 'a';
 		//・文字列型
-		StringNum = "ハロー";
+		stringNum = "ハロー";
 		//・ブーリアン型
 		booleanNum = true;
 		
@@ -74,7 +74,7 @@ public class Qes1_13 {
 		//20
 		System.out.println(byteNum + byteNum);
 		//a ハロー true
-		System.out.println(charNum + " " + StringNum + " " + booleanNum);
+		System.out.println(charNum + " " + stringNum + " " + booleanNum);
 		//11130
 		System.out.println(byteNum + byteNum + byteNum + shortNum + intNum + longNum);
 		//10000000000
@@ -106,22 +106,22 @@ public class Qes1_13 {
 		//・age型
 		byte age = 18;
 		//・cm型
-		float Cm = 170.5f;
+		float cm = 170.5f;
 		//・kg型
-		float Kg = 62.2f;
+		float kg = 62.2f;
 		//・food型
 		String food = "寿司";
 		
 		System.out.println("初めまして" + name + "です");
 		System.out.println("年齢は" + age + "歳です");
-		System.out.println("身長は" + Cm + "cmです");
-		System.out.println("体重は" + Kg + "kgです");
+		System.out.println("身長は" + cm + "cmです");
+		System.out.println("体重は" + kg + "kgです");
 		System.out.println("好きな食べ物は" + food + "です");
 		
 		//・6で作成した自己紹介に続いてBMIが出力されるようにしてください
 		//・「BMIは○○です」
 		//・ただし計算は数値を直書きせず、全て変数を使ってすること
-		float bmi = Kg / ((Cm / 100) * (Cm / 100));
+		float bmi = kg / ((cm / 100) * (cm / 100));
 		BigDecimal beforeBmi = new BigDecimal(bmi);
 		BigDecimal afterBmi = beforeBmi.setScale(1,RoundingMode.HALF_UP);
 		System.out.println("BMIは" + afterBmi + "です");
@@ -131,15 +131,15 @@ public class Qes1_13 {
 		//・6で宣言した変数に再代入し下記の通りコンソールに出力してください
 		name = "鈴木一郎";
 		age = 24;
-		Cm = 168.5f;
-		Kg = 64.2f;
+		cm = 168.5f;
+		kg = 64.2f;
 		food = "オムライス";
 		System.out.println("初めまして" + name + "です");
 		System.out.println("年齢は" + age + "歳です");
-		System.out.println("身長は" + Cm + "cmです");
-		System.out.println("体重は" + Kg + "kgです");
+		System.out.println("身長は" + cm + "cmです");
+		System.out.println("体重は" + kg + "kgです");
 		System.out.println("好きな食べ物は" + food + "です");
-		bmi = Kg / ((Cm / 100) * (Cm / 100));
+		bmi = kg / ((cm / 100) * (cm / 100));
 		beforeBmi = new BigDecimal(bmi);
 		afterBmi = beforeBmi.setScale(1,RoundingMode.HALF_UP);
 		System.out.println("BMIは" + afterBmi + "です");
@@ -149,15 +149,15 @@ public class Qes1_13 {
 		//・下記の通りコンソールに出力してください
 		name = "鈴木一郎";
 		age += age;
-		Cm += Cm;
-		Kg += Kg;
+		cm += cm;
+		kg += kg;
 		food = "オムライス";
 		System.out.println("初めまして" + name + "です");
 		System.out.println("年齢は" + age + "歳です");
-		System.out.println("身長は" + Cm + "cmです");
-		System.out.println("体重は" + Kg + "kgです");
+		System.out.println("身長は" + cm + "cmです");
+		System.out.println("体重は" + kg + "kgです");
 		System.out.println("好きな食べ物は" + food + "です");
-		bmi = Kg / ((Cm / 100) * (Cm / 100));
+		bmi = kg / ((cm / 100) * (cm / 100));
 		beforeBmi = new BigDecimal(bmi);
 		afterBmi = beforeBmi.setScale(1,RoundingMode.HALF_UP);
 		System.out.println("BMIは" + afterBmi + "です");
