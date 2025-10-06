@@ -169,7 +169,25 @@ public class Qes1_13 {
 		System.out.println(25 <= age );
 		System.out.println();
 		
+		//・8で使用した【年齢・身長・体重】を文字列型に型変換し繋げて出力してください
+		age = 24;
+		cm = 168.5f;
+		kg = 64.2f;
+		String ageStr = String.valueOf(age);
+		String cmStr = String.valueOf(cm);
+		String kgStr = String.valueOf(kg);
+		System.out.println(ageStr + cmStr + kgStr);
 		
+		System.out.println();
+		
+		//11で変換した【年齢・身長】を整数型に変換して出力してください
+		
+		Integer ageInt = Integer.parseInt(ageStr);
+		System.out.println(ageInt);
+		
+		float cmFloat = Float.parseFloat(cmStr);
+		int cmInt = (int) cmFloat;
+		System.out.println(cmInt);
 		
 		
 	}   
