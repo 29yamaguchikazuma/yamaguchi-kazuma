@@ -193,9 +193,10 @@ public class Qes1_13 {
 		
 		//12で変換した【年齢・身長】で【年齢が25もしくは身長が160以上】であればtrueを出力してください
 		
-		ageInt = 24;
-		cmInt = 168;
-		System.out.println(168 <= cmInt );
+		System.out.println(ageInt < 25 || cmInt > 160);
+		
+		
+		System.out.println();
 		
 	}   
 
