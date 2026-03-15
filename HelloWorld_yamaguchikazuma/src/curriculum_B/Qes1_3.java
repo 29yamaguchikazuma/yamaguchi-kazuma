@@ -21,10 +21,12 @@ public class Qes1_3 {
 
 		} else if (!userName.matches("^[a-zA-Z0-9]+$")) {
 			System.out.println("半角英数字のみで名前を入力してください");
+		} 
+		else {
 
-		} else {
 			System.out.println("ユーザー名「" + userName + "」を登録しました");
 		}
+
 		//3. じゃんけん
 		Random rand = new Random();
 		int count = 0;
@@ -34,9 +36,14 @@ public class Qes1_3 {
 			System.out.println("0:グー　1:チョキ 2:パー");
 
 			int user = sc.nextInt();
-			int enemy = rand.nextInt(3);
+			if (user < 0 || user > 2) {
+				System.out.println("0~2で入力してください");
+				continue;
+			}
 
 			count++;
+
+			int enemy = rand.nextInt(3);
 
 			System.out.println("自分の手：" + user);
 			System.out.println("相手の手：" + enemy);
