@@ -79,10 +79,22 @@ public class Qes1_3 {
 				System.out.println("俺の勝ち！");
 				System.out.println("なんで負けたか、明日までに考えといてください。");
 				System.out.println("そしたら何かが見えてくるはずです");
+				
 			}
 
 		}
-
+            //4for
+		    for(int i =1; i <= 9; i++) {
+		    	for (int j =1; j <= 9; j++) {
+		    		System.out.printf("%02d * %02d = %02d", i, j, i * j);
+		    		
+		    		if (j != 9) {
+		    			System.out.print(" || ");
+		    			
+		    		}
+		    	}
+		    	System.out.println();
+		    }
 		sc.close();
 	}
 }
