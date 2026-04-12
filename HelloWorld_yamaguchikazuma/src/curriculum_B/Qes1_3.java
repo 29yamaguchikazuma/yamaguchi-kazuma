@@ -21,8 +21,7 @@ public class Qes1_3 {
 
 		} else if (!userName.matches("^[a-zA-Z0-9]+$")) {
 			System.out.println("半角英数字のみで名前を入力してください");
-		} 
-		else {
+		} else {
 
 			System.out.println("ユーザー名「" + userName + "」を登録しました");
 		}
@@ -79,22 +78,49 @@ public class Qes1_3 {
 				System.out.println("俺の勝ち！");
 				System.out.println("なんで負けたか、明日までに考えといてください。");
 				System.out.println("そしたら何かが見えてくるはずです");
-				
+
 			}
 
+			//4for
+			for (int i = 1; i <= 9; i++) {
+				for (int j = 1; j <= 9; j++) {
+					System.out.printf("%02d * %02d = %02d", i, j, i * j);
+
+					if (j != 9) {
+						System.out.print(" || ");
+					}
+				}
+				System.out.println();
+			}
+			//5
+			for (int i = 1; i <= 9; i++) {
+				for (int j = 1; j <= 9; j++) {
+					System.out.printf("%3d", i * j);
+				}
+				System.out.println();
+			}
+
+			// 6問目
+			System.out.println("商品を入力してください：");
+			String input = sc.nextLine();
+
+			switch (input) {
+
+			case "パソコン":
+			case "冷蔵庫":
+			case "扇風機":
+			case "洗濯機":
+			case "加湿器":
+			case "テレビ":
+			case "ディスプレイ":
+				System.out.println(input + "の残り台数は" + rand.nextInt(12) + "台です");
+				break;
+
+			default:
+				System.out.println("「" + input + "」は指定の商品ではありません");
+			}
+
+			sc.close();
 		}
-            //4for
-		    for(int i =1; i <= 9; i++) {
-		    	for (int j =1; j <= 9; j++) {
-		    		System.out.printf("%02d * %02d = %02d", i, j, i * j);
-		    		
-		    		if (j != 9) {
-		    			System.out.print(" || ");
-		    			
-		    		}
-		    	}
-		    	System.out.println();
-		    }
-		sc.close();
 	}
 }
