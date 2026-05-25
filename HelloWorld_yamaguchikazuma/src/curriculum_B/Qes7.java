@@ -10,6 +10,12 @@ public class Qes7 {
 		System.out.print("生徒の人数を入力してください(2以上): ");
 		int student = Integer.parseInt(sc.nextLine());
 
+		if (student < 2) {
+			System.out.println("2以上を入力してください");
+			sc.close();
+			return;
+		}
+
 		int[][] score = new int[student][4];
 
 		String[] subject = { "英語", "数学", "理科", "社会" };
@@ -36,7 +42,7 @@ public class Qes7 {
 				total += score[i][j];
 			}
 
-			System.out.printf("%d人目の平均点は%.2f点です。", i + 1, (double) total / 4);
+			System.out.printf("%d人目の平均点は%.2f点です。%n", i + 1, (double) total / 4);
 		}
 
 		System.out.println();
@@ -50,7 +56,7 @@ public class Qes7 {
 				total += score[i][j];
 			}
 
-			System.out.printf("%sの平均点は%.2f点です。", subject[j], (double) total / student);
+			System.out.printf("%sの平均点は%.2f点です。%n", subject[j], (double) total / student);
 
 		}
 
@@ -64,7 +70,7 @@ public class Qes7 {
 				allTotal += score[i][j];
 			}
 		}
-		System.out.printf("全体の平均点は%.2f点です。", (double) allTotal / (student * 4));
+		System.out.printf("全体の平均点は%.2f点です。%n", (double) allTotal / (student * 4));
 
 		sc.close();
 	}
